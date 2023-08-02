@@ -45,8 +45,14 @@ public class Terrest extends Actor
         return this.speed;
     }
     
-    public void moverse(){
+    public void movement(){
         move(this.speed);
+    }
+    
+    public void border(){
+        if(getX()>getWorld().getWidth()-5 || getX()<5){
+            getWorld().removeObject(this);
+        }
     }
     
 }

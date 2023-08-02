@@ -36,7 +36,7 @@ public class Camp extends World
         }
         if (enemy == 1){
             int posY = Greenfoot.getRandomNumber(getHeight());
-            addObject(new AlienMonster(), getWidth(), posY);
+            addObject(new AlienMonster(), getWidth()-10, posY);
             
         }
     }

@@ -18,6 +18,7 @@ public class HeavySoldier extends Terrest
     
     public void act()
     {
-        moverse();
+        movement();
+        border();
     }
 }

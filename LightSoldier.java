@@ -18,6 +18,7 @@ public class LightSoldier extends Terrest
     
     public void act()
     {
-        moverse();
+        movement();
+        border();
     }
 }

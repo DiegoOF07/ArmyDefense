@@ -18,6 +18,7 @@ public class AlienMonster extends Terrest
     }
     public void act()
     {
-        moverse();
+        movement();
+        border();
     }
 }
