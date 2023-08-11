@@ -12,8 +12,12 @@ public class HumanShot extends Actor
      * Act - do whatever the HumanShot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int damage;
+    public HumanShot(int damage){
+        this.damage = damage;
+    }
     public void act()
     {
-        // Add your action code here.
+        move(7);
     }
 }

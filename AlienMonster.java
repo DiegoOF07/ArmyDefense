@@ -14,7 +14,7 @@ public class AlienMonster extends Terrest
      */
     
     public AlienMonster(){
-        super(150,20,20,-2);
+        super(150,20,20,-2, 75);
     }
     public void act()
     {

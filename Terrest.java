@@ -12,6 +12,8 @@ public class Terrest extends Actor
     private int attack;
     private int shell;
     private int speed;
+    private int shots;
+    private int maxShots;
     
     /**
      * Act - do whatever the Terrest wants to do. This method is called whenever
@@ -22,11 +24,12 @@ public class Terrest extends Actor
         
     }
     
-    public Terrest(int life, int attack, int shell, int speed){
+    public Terrest(int life, int attack, int shell, int speed, int maxShots){
         this.life = life;
         this.attack = attack;
         this.shell = shell;
         this.speed = speed;
+        this.maxShots = maxShots;
     }
     
     public int getLife(){
@@ -52,6 +55,17 @@ public class Terrest extends Actor
     public void border(){
         if(getX()>getWorld().getWidth()-5 || getX()<5){
             getWorld().removeObject(this);
+        }
+    }
+    
+    public void attacking(){
+        if (shots > 0){
+            shots--;
+        }else{
+            shots = this.maxShots;
+        }
+        if (shots == 1){
+            getWorld().addObject(new HumanShot(attack), getX(), getY());
         }
     }
     

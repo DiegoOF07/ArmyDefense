@@ -13,12 +13,13 @@ public class LightSoldier extends Terrest
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public LightSoldier(){
-        super(100,10,10,2);
+        super(100,10,10,2,50);
     }
     
     public void act()
     {
         movement();
         border();
+        attacking();
     }
 }

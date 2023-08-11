@@ -43,5 +43,7 @@ public class Camp extends World
     
     public void addGenerator(){
         addObject(new GenLightSoldier(), 0,0);
+        addObject(new GenHeavySoldier(), 0,0);
+        addObject(new GenLightPlane(), 0,0);
     }
 }

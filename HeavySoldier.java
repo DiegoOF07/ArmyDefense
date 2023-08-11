@@ -13,12 +13,13 @@ public class HeavySoldier extends Terrest
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public HeavySoldier(){
-        super(120,25,20,1);
+        super(120,25,20,1,100);
     }
     
     public void act()
     {
         movement();
         border();
+        attacking();
     }
 }
